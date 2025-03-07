@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Information Form</title>
+    <style>
+       
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Profile Picture */
+.profile-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+ 
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Gender Options */
+.gender-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: #28a745;
+    color: white;
+}
+
+/* Reset Button */
+button[type="reset"] {
+    background: #dc3545;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    input, select {
+        padding: 8px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <fieldset>
+    <div class="form-container">
+        <h2>Personal Information</h2>
+        <div class="profile-pic">
+            <img src="ayan.jpg" alt="Profile Picture">
+        </div>
+        <form>
+            
+        
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            
+            <label for="fname">Father's Name</label>
+            <input type="text" id="fname" placeholder="Enter father's name">
+
+            <label for="mname">Mother's Name</label>
+            <input type="text" id="mname" placeholder="Enter mother's name">
+
+            <label for="contact">Contact</label>
+            <input type="tel" id="contact" placeholder="Enter contact number">
+
+            <label>Gender</label>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <label for="city">City</label>
+            <select id="city">
+                <option>Select your city</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Kolkata</option>
+                <option>Chennai</option>
+            </select>
+        
+            <div class="btn-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>
